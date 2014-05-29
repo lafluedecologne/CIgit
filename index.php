@@ -16,7 +16,7 @@
  *     production
  *
  * NOTE: If you change these, also change the error_reporting() code below
- *test3
+ * Sebastian Flügel Air
  */
 	define('ENVIRONMENT', 'development');
 /*
