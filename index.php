@@ -16,7 +16,7 @@
  *     production
  *
  * NOTE: If you change these, also change the error_reporting() code below
- *test2asdfasf
+ *test3
  */
 	define('ENVIRONMENT', 'development');
 /*
