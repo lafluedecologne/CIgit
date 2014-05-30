@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('Europe/Berlin');
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -18,7 +18,19 @@
  * NOTE: If you change these, also change the error_reporting() code below
  * Sebastian Flügel Air
  */
-	define('ENVIRONMENT', 'development');
+  
+
+    switch (dirname(__FILE__)) {
+    case '/Applications/MAMP/htdocs/CIgit':
+        define('ENVIRONMENT', 'development');
+            break;
+
+    default:
+        define('ENVIRONMENT', 'production');
+        break;
+}
+
+
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -33,7 +45,7 @@ if (defined('ENVIRONMENT'))
 	switch (ENVIRONMENT)
 	{
 		case 'development':
-			error_reporting(E_ALL);
+			error_reporting(E_ALL | E_STRICT);
 		break;
 	
 		case 'testing':
